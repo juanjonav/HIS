@@ -52,10 +52,10 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
   // ========================
 
       //llenar datos de responsable
-      hoja.getCell(`x7`).value = document.getElementById("nombresApellidosResponsable").value;
-      hoja.getCell(`U7`).value = document.getElementById("dniResponsable").value;
+      hoja.getCell(`X7`).value = document.getElementById("nombresApellidosResponsable").value || "";
+      hoja.getCell(`U7`).value = document.getElementById("dniResponsable").value || "";
 
-      hoja.getCell(`c7`).value = document.getElementById("mes").value;
+      hoja.getCell(`C7`).value = document.getElementById("mes").value || "";
 
   
     // GENERAR Y DESCARGAR EL EXCEL
