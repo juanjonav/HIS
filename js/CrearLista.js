@@ -1,7 +1,7 @@
 document.getElementById("btnGenerarExcelTabla").addEventListener("click", async () => {
     try {
         const workbook = new ExcelJS.Workbook();
-        const response = await fetch("https://juanjonav.github.io/plantillas-excel/lista.xlsx");
+        const response = await fetch("https://juanjonav.github.io/HIS/Plantillas/lista.xlsx");
         const arrayBuffer = await response.arrayBuffer();
         await workbook.xlsx.load(arrayBuffer); // Cargar el archivo en el Workbook
         
