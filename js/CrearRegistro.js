@@ -11,7 +11,7 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
     const totalFilas = filas.length;
 
     const textoplano = "NOMBRES Y APELLIDOS PACIENTE: ";
-  // ======================== primeros
+  // ======================== 
     for (let i = 0; i < Math.min(totalFilas, 25); i++) {
       const fila = filas[i];
       const celdas = fila.querySelectorAll("td");
@@ -50,6 +50,13 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
       hoja.getCell(`Z${baseRow + 5}`).value = codigos[2] || "";
   }
   // ========================
+
+      //llenar datos de responsable
+      hoja.getCell(`x7`).value = document.getElementById("nombresApellidosResponsable").value;
+      hoja.getCell(`U7`).value = document.getElementById("dniResponsable").value;
+
+      hoja.getCell(`c7`).value = document.getElementById("mes").value;
+
   
     // GENERAR Y DESCARGAR EL EXCEL
     const buffer = await workbook.xlsx.writeBuffer();
