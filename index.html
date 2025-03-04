@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Pacientes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body class="bg-light">
+  <header class="bg-primary text-white py-3 text-center">
+    <h1 class="h3">Registro de Pacientes</h1>
+  </header>
+
+  <main class="container mt-4 ">
+    <!-- Formulario -->
+
+
+     <form id="formularioEncargado" class="mb-5">
+      
+      <h3>responsable de la atencion</h3>
+      
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <!-- Nombres y apellidos -->
+          <label for="nombresApellidosResponsable" class="form-label">Nombres y Apellidos del responsable</label>
+          <select id="nombresApellidosResponsable" class="form-select form-select-sm" name="nombresApellidosResponsable">
+            <option value="">Seleccione</option>
+            <option value="JESUS ROJAS POZO">Jesus Rojas Pozo</option>
+            <option value="ERIKA GISELA CRUZ CAMPOS">Erika Gisela Cruz Campos</option>
+            <option value="MARAVI SAAVEDRA LIUS ALBERTO">Luis Alberto Maravi Saavedra</option>
+            <option value="VERDE GONZALES HEGIDIO">Hegidio Verde Gonzales</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <!-- DNI -->
+          <label for="dniResponsable" class="form-label">DNI</label>
+          <input type="text" id="dniResponsable" class="form-control form-control-sm" name="dniResponsable" placeholder="">
+        </div>
+
+        <div class="espaciovacio col-1"></div>
+        <div class="mes col-md-2">
+          <label for="mes" class="form-label">Mes</label>
+          <select name="mes" id="mes" class="form-select form-select-sm">
+            <option value="">Seleccione</option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo" selected>Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+          </select>
+        </div>
+      </div>
+     </form>
+    <form id="formularioPaciente" class="mb-5">
+
+      
+
+      <h3 class="mb-3">Datos del Paciente</h3>
+
+      <div class="row g-3">
+        <!-- Nombres y apellidos -->
+        <div class="col-8">
+          <label for="nombresApellidos" class="form-label">Nombres y Apellidos del paciente</label>
+          <input type="text" id="nombresApellidos" class="form-control form-control-sm" name="nombresApellidos" placeholder="">
+        </div>
+
+      <div class="col-1"></div>
+        <!-- Día -->
+        <div class="col-1 ">
+          <label for="dia" class="form-label">Día</label>
+          <input type="number" id="dia" class="form-control form-control-sm" name="dia" placeholder="">
+        </div>
+
+        <!-- numero de cita -->
+        <div class="col-md-2">
+          <label for="numeroCita" class="form-label">Número de Cita</label>
+          <input type="text" id="numeroCita" class="form-control form-control-sm" name="numeroCita" placeholder="">
+        </div>
+
+        <!-- fecha de nacimiento-->
+        <div class="col-2">
+          <label for="fecha" class="form-label">Fecha de nacimiento</label>
+          <input type="date" id="fecha" class="form-control form-control-sm" name="fecha">
+        </div>
+        
+
+        <!-- DNI -->
+        <div class="col-md-3">
+          <label for="dni" class="form-label">DNI</label>
+          <input type="text" id="dni" class="form-control form-control-sm" name="dni" placeholder="">
+        </div>
+
+
+        <!-- Financiador de salud -->
+        <div class="col-md-3">
+          <label for="financiadorSalud" class="form-label">Financiador de Salud</label>
+          <input type="text" id="financiadorSalud" class="form-control form-control-sm" name="financiadorSalud" placeholder="">
+        </div>
+
+        <!-- Etnia -->
+        <div class="col-md-2">
+          <label for="etnia" class="form-label">Etnia</label>
+          <input type="text" id="etnia" class="form-control form-control-sm" name="etnia" placeholder="">
+        </div>
+
+        <div class="col-md-2">
+          <label for="tamizaje" class="form-label">Tamizaje</label>
+          <select name="tamizaje" id="tamizaje">
+            <option value="">Seleccione</option>
+            <option value="01">Violencia</option>
+            <option value="02">Alcohol y Drogas</option>
+            <option value="03">Trastornos Depresivos</option>
+            <option value="06">Problemas del Neurodesarrollo</option>
+            <option value="07">Deterioro Cognitivo/Demencia</option>
+            <option value="08">Trastorno de Comportamiento</option>
+          </select>
+        </div>
+        <!-- Distrito -->
+        <div class="col-md-3">
+          <label for="Distrito" class="form-label">Distrito</label>
+          <input type="text" id="Distrito" class="form-control form-control-sm" name="Distrito" placeholder="">
+        </div>
+        <!-- Centro Poblado -->
+        <div class="col-md-3">
+          <label for="CentroPoblado" class="form-label">Centro Poblado</label>
+          <input type="text" id="CentroPoblado" class="form-control form-control-sm" name="CentroPoblado" placeholder="">
+        </div>
+
+        <!-- Edad -->
+        <div class="col-md-1">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" id="edad" class="form-control form-control-sm" name="edad" placeholder="">
+        </div>
+
+        <!-- Sexo -->
+        <div class="col-md-2">
+          <label for="sexo" class="form-label">Sexo</label>
+          <select id="sexo" class="form-select form-select-sm" name="sexo">
+            <option value="">Seleccione</option>
+            <option value="F">Femenino</option>
+            <option value="M">Masculino</option>
+          </select>
+        </div>
+        <!--sis-->
+        <div class="col-md-1">
+          <label for="sis" class="form-label">SIS</label>
+          <input type="number" id="sis" class="form-control form-control-sm" name="sis" placeholder="">
+        </div>
+      </div>
+        <!--<p class="col-12">-->
+
+      <h3 class="h6 mt-4">Diagnósticos</h3>
+      <div class="row">
+        <!-- Diagnóstico 1 -->
+        <div class="col-10">
+          <label for="diagnostico1">Diagnóstico 1:</label>
+          <input type="text" id="diagnostico1" class="form-control" name="diagnostico1" placeholder="">
+        </div>
+        <div class="col-2">
+          <label for="cie1">Código CIE/CPT:</label>
+          <input type="text" id="cie1" class="form-control" name="cie1" placeholder="">
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Diagnóstico 2 -->
+        <div class="col-10">
+          <label for="diagnostico2">Diagnóstico 2:</label>
+          <input type="text" id="diagnostico2" class="form-control" name="diagnostico2" placeholder="">
+        </div>
+        <div class="col-2">
+          <label for="cie2">Código CIE/CPT:</label>
+          <input type="text" id="cie2" class="form-control" name="cie2" placeholder="">
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Diagnóstico 3 -->
+        <div class="col-10">
+          <label for="diagnostico3">Diagnóstico 3:</label>
+          <input type="text" id="diagnostico3" class="form-control" name="diagnostico3" placeholder="">
+        </div>
+        <div class="col-2">
+          <label for="cie3">Código CIE/CPT:</label>
+          <input type="text" id="cie3" class="form-control" name="cie3" placeholder="">
+        </div>
+      </div>
+      
+
+      <div class="text-end mt-4">
+        <button type="button" id="agregarPaciente" class="btn btn-primary btn-sm">Agregar Paciente</button>
+      </div>
+    </form>
+
+    <!-- Tabla de pacientes -->
+    <section>
+      <h2 class="h5">Pacientes Agregados</h2>
+      <table id="tablaPacientes" class="table table-sm table-striped">
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Día</th>
+            <th>DNI</th>
+            <th>N°Consulta</th>
+            <th>Financ</th>
+            <th>Etnia</th>
+            <th>Tamizaje</th>
+            <th>Distrito</th>
+            <th>CentroPoblado</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Diagnósticos</th>
+            <th>CIE</th>
+            <th>fecha</th>
+            <th>SIS</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        
+        <tbody id="tablaPacientesBody">
+          <!-- Datos dinámicos -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Botones para generar Excel -->
+    <section class="mt-4 text-center">
+      <button id="btnGenerarExcelHis" class="btn btn-secondary btn-sm">Generar HIS</button>
+      <button id="btnGenerarExcelTabla" class="btn btn-secondary btn-sm">Generar Registro</button>
+    </section>
+  </main>
+
+  <script src="./js/App.js"></script>
+  <script src="./js/AgregarPaciente.js"></script>
+  <script src="./js/CrearRegistro.js"></script>
+  <script src="./js/CrearLista.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+</body>
+</html>
