@@ -15,8 +15,11 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
 
         // Diccionario para mapear datos[6] a columnas
         const columnaMap = {
-            "01": "L", "02": "M", "03": "N", "06": "O", "07": "P", "08": "Q"
+            "01": "L", "02": "M", "03": "N", "04": "O", "05": "P", "06": "Q", "07": "R", "08": "S"
         };
+        const lugarnumerocita = {
+            "1": "AE", "2": "AF", "3": "AG", "4": "AH", "5": "AI", "6": "AJ", "7": "AK", "8": "AL"
+        }
 
         for (let i = 0; i < Math.min(totalFilas, 25); i++) {
             const fila = filas[i];
@@ -24,7 +27,7 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
             const datos = Array.from(celdas).map(td => td.textContent.trim());
             const baseRow = 3 + i; // Ahora inicia en fila 3 y aumenta de 1 en 1
 
-            let fechanacimiento = datos[13] ? datos[13].split("-").reverse().join("-") : "";
+            let fechanacimiento = datos[14] ? datos[14].split("-").reverse().join("-") : "";
             
             hoja.getCell(`A${baseRow}`).value = datos[1];  // Día
             hoja.getCell(`B${baseRow}`).value = datos[2];  // DNI
@@ -38,15 +41,21 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
                 hoja.getCell(`G${baseRow}`).value = "X";  // Masculino en columna G
             }
 
-            //hoja.getCell(`H${baseRow}`).value = datos[14] || "";  // SIS
-            hoja.getCell(`Y${baseRow}`).value = datos[12] || "";  // Diagnósticos
-            hoja.getCell(`Z${baseRow}`).value = datos[3];  // Numero de consulta
+            hoja.getCell(`H${baseRow}`).value = datos[4] || "";  // SIS
+            hoja.getCell(`AA${baseRow}`).value = datos[13] || "";  // Diagnósticos
+            hoja.getCell(`AB${baseRow}`).value = datos[3];  // Numero de consulta
 
             // Usar el diccionario para escribir 1 en la columna correcta
             const columna = columnaMap[datos[6]];
             if (columna) {
                 hoja.getCell(`${columna}${baseRow}`).value = 1;
             }
+            const letracita = lugarnumerocita[datos[3]];
+            if (letracita) {
+                hoja.getCell(`${letracita}${baseRow}`).value = "x";
+            }
+
+            hoja.getCell(`AM${baseRow}`).value = document.getElementById("nombresApellidosResponsable").value || ""  // responsable
         }
 
         const buffer = await workbook.xlsx.writeBuffer();
