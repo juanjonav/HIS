@@ -797,7 +797,12 @@ const codigoscie = {
     "Y086": "AGRESION POR OTROS MEDIOS ESPECIFICADOS EN AREA INDUSTRIAL Y DE LA CONSTRUCCION",
     "Y087": "AGRESION POR OTROS MEDIOS ESPECIFICADOS EN GRANJA",
     "Y088": "AGRESION POR OTROS MEDIOS ESPECIFICADOS EN OTRO LUGAR ESPECIFICADO",
-    "Y089": "AGRESION POR OTROS MEDIOS ESPECIFICADOS EN LUGAR NO ESPECIFICADO"
+    "Y089": "AGRESION POR OTROS MEDIOS ESPECIFICADOS EN LUGAR NO ESPECIFICADO",
+    "Z133": "Pesquisa de problemas relacionados a la salud mental",
+    "Z720": "Problemas relacionados con tabaco",
+    "Z721": "Problemas sociales relacionados con el uso de alcohol",
+    "Z722": "Problemas sociales relacionados con el uso de drogas",
+    "R456": "Problemas relacionados con violencia"
 }
 // Escuchar el clic del botón
 document.getElementById("BTNbuscarDiagnosticos").addEventListener("click", () => {
