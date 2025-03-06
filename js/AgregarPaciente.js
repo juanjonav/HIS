@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
       const fecha = document.getElementById("fecha").value; 
-      const sis = document.getElementById("sis").value;
+      const Tamizajetipo = document.getElementById("Tamizajetipo").value;
       // Separar los diagnósticos y códigos CIE con comas
       const diagnosticos = [diagnostico1, diagnostico2, diagnostico3]
         .filter((diagnostico) => diagnostico !== "")
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${financiadorSalud || ""}</td>
         <td>${etnia || ""}</td>
         <td>${tamizaje || ""}</td>
+        <td>${Tamizajetipo || ""}</td>
         <td>${distrito || ""}</td>
         <td>${CentroPoblado || ""}</td>
         <td>${edad || ""}</td>
@@ -59,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${diagnosticos || ""}</td>
         <td>${codigosCIE || ""}</td>
         <td>${fecha || ""}</td>
-        <td>${sis || ""}</td>
         
         <td>
           <button class="btn btn-sm btn-danger btnEliminar">Eliminar</button>

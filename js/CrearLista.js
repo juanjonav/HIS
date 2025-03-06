@@ -38,7 +38,7 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
                 hoja.getCell(`G${baseRow}`).value = "X";  // Masculino en columna G
             }
 
-            hoja.getCell(`H${baseRow}`).value = datos[14] || "";  // SIS
+            //hoja.getCell(`H${baseRow}`).value = datos[14] || "";  // SIS
             hoja.getCell(`Y${baseRow}`).value = datos[12] || "";  // Diagnósticos
             hoja.getCell(`Z${baseRow}`).value = datos[3];  // Numero de consulta
 

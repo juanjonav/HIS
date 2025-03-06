@@ -112,7 +112,7 @@
           <label for="etnia" class="form-label">Etnia</label>
           <input type="text" id="etnia" class="form-control form-control-sm" name="etnia" placeholder="">
         </div>
-
+        <!-- Tamizaje -->
         <div class="col-md-2">
           <label for="tamizaje" class="form-label">Tamizaje</label>
           <select name="tamizaje" id="tamizaje">
@@ -120,6 +120,8 @@
             <option value="01">Violencia</option>
             <option value="02">Alcohol y Drogas</option>
             <option value="03">Trastornos Depresivos</option>
+            <option value="04">Psicosis</option>
+            <option value="05">Habilidades Sociales</option>
             <option value="06">Problemas del Neurodesarrollo</option>
             <option value="07">Deterioro Cognitivo/Demencia</option>
             <option value="08">Trastorno de Comportamiento</option>
@@ -158,10 +160,15 @@
             <option value="M">Masculino</option>
           </select>
         </div>
-        <!--sis-->
-        <div class="col-md-1">
-          <label for="sis" class="form-label">SIS</label>
-          <input type="number" id="sis" class="form-control form-control-sm" name="sis" placeholder="">
+        <div class="col-1"></div>
+        <!--sis  Tamizajetipo-->
+        <div class="col-md-2 ">
+          <label for="Tamizajetipo" class="form-label">tamizaje positivo</label>
+          <select id="Tamizajetipo" class="form-select form-select-sm" name="Tamizajetipo">
+            <option value=""></option>
+            <option value="+">Positivo</option>
+            <option value="-">Negativo</option>
+          </select>
         </div>
       </div>
         <!--<p class="col-12">-->
@@ -226,6 +233,7 @@
             <th>Financ</th>
             <th>Etnia</th>
             <th>Tamizaje</th>
+            <th>tipo</th>
             <th>Distrito</th>
             <th>CentroPoblado</th>
             <th>Edad</th>
@@ -233,7 +241,6 @@
             <th>Diagnósticos</th>
             <th>CIE</th>
             <th>fecha</th>
-            <th>SIS</th>
             <th>Acciones</th>
           </tr>
         </thead>

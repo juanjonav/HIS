@@ -13,6 +13,31 @@ document.getElementById("nombresApellidosResponsable").addEventListener("change"
   dniInput.value = responsables[nombreSeleccionado] || "";  // Si no hay coincidencia, deja vacío
 });
 
+
+const codigosCIE10 = {
+  "01": "96150.01",
+  "02": "96150.02",
+  "03": "96150.03",
+  "04": "96150.04",
+  "05": "96150.05",
+  "06": "96150.06",
+  "07": "96150.07",
+  "08": "96150.08",
+};
+
+document.getElementById("Tamizajetipo").addEventListener("change", function() {
+const tamizajeResultado = this.value;
+const tamizajeSeleccionado = document.getElementById("tamizaje").value;
+const codigocie1 = document.getElementById("cie1");
+const codigocie2 = document.getElementById("cie2");
+const codigocie3 = document.getElementById("cie3");
+
+codigocie1.value = codigosCIE10[tamizajeSeleccionado] || "";
+codigocie2.value = tamizajeResultado === "-" ? "99402.09" : "Z133" 
+codigocie3.value = tamizajeResultado === "+" ? "99402.09" : "";
+});
+
+
 // localstorage
 function cargarDesdeLocalStorage() {
   const datos = JSON.parse(localStorage.getItem("pacientes") || "[]");
@@ -29,6 +54,7 @@ function cargarDesdeLocalStorage() {
           <td>${paciente.financiadorSalud}</td>
           <td>${paciente.etnia}</td>
           <td>${paciente.tamizaje}</td>
+          <td>${paciente.Tamizajetipo}</td>
           <td>${paciente.distrito}</td>
           <td>${paciente.CentroPoblado}</td>
           <td>${paciente.edad}</td>
@@ -36,7 +62,6 @@ function cargarDesdeLocalStorage() {
           <td>${paciente.diagnosticos}</td>
           <td>${paciente.codigosCIE}</td>
           <td>${paciente.fecha}</td>
-          <td>${paciente.sis}</td>
           <td><button class="btn btn-sm btn-danger btnEliminar">Eliminar</button></td>
       `;
 
@@ -68,7 +93,7 @@ function guardarEnLocalStorage() {
           diagnosticos: fila.cells[11].textContent,
           codigosCIE: fila.cells[12].textContent,
           fecha: fila.cells[13].textContent,
-          sis: fila.cells[14].textContent
+          Tamizajetipo: fila.cells[14].textContent
       };
       datos.push(paciente);
   }

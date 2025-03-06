@@ -16,9 +16,9 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
       const fila = filas[i];
       const celdas = fila.querySelectorAll("td");
       const datos = Array.from(celdas).map(td => td.textContent.trim());
-      const diagnosticos = datos[11].split(",").map(d => d.trim());
-      const codigos = datos[12].split(",").map(c => c.trim());
-      const fecha = datos[13] ? datos[13].split("-").map(d => d.trim()) : ["", "", ""]; 
+      const diagnosticos = datos[12].split(",").map(d => d.trim());
+      const codigos = datos[13].split(",").map(c => c.trim());
+      const fecha = datos[14] ? datos[14].split("-").map(d => d.trim()) : ["", "", ""]; 
       
       //const baseRow = 12 + (i * 6);
       const baseRow = i < 12 ? 12 + (i * 6) : 97 + ((i - 12) * 6);
@@ -37,9 +37,9 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
       hoja.getCell(`D${baseRow + 2}`).value = datos[4];  // Financiamiento
       hoja.getCell(`D${baseRow + 4}`).value = datos[5];  // Etnia
 
-      hoja.getCell(`E${baseRow + 2}`).value = datos[7];  // Distrito
-      hoja.getCell(`E${baseRow + 4}`).value = datos[8];  // Centro poblado
-      hoja.getCell(`I${baseRow + 2}`).value = datos[9];  // Edad
+      hoja.getCell(`E${baseRow + 2}`).value = datos[8];  // Distrito
+      hoja.getCell(`E${baseRow + 4}`).value = datos[9];  // Centro poblado
+      hoja.getCell(`I${baseRow + 2}`).value = datos[10];  // Edad
       
       
       hoja.getCell(`S${baseRow + 2}`).value = diagnosticos[0] || "";
