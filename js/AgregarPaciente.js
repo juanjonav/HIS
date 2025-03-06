@@ -81,13 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   
     // Asignar evento al botón de agregar paciente
-    btnAgregarPaciente.addEventListener("click", manejarAgregarPaciente);
+    btnAgregarPaciente.addEventListener("click", () => {
+      manejarAgregarPaciente();
+      guardarEnLocalStorage();  // Guardar en localStorage después de agregar paciente
+    });
+
   });
-  
-  window.onbeforeunload = function () {
-    const tabla = document.getElementById("tablaPacientesBody");
-    if (tabla && tabla.rows.length > 0) {
-        return "Tienes datos sin guardar. ¿Seguro que quieres salir?";
-    }
-  };
-  
