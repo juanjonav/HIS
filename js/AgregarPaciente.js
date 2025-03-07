@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const manejarAgregarPaciente = () => {
       // Obtener valores de los campos del formulario
       const nombresApellidos = document.getElementById("nombresApellidos").value;
+
+      //fecha actual
       const dia = document.getElementById("dia").value;
+      
+
       const dni = document.getElementById("dni").value;
       //const historiaClinica = document.getElementById("historiaClinica").value;
       const numeroCita = document.getElementById("numeroCita").value;

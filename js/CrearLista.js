@@ -29,7 +29,14 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
 
             let fechanacimiento = datos[14] ? datos[14].split("-").reverse().join("-") : "";
             
-            hoja.getCell(`A${baseRow}`).value = datos[1];  // Día
+            //fecha actual
+            const fechahoy = new Date();
+            const añoActual = fechahoy.getFullYear();
+            const mesActual = fechahoy.getMonth() + 1; // Los meses empiezan en 0
+            const fechaActual = `${datos[1]}-${mesActual}-${añoActual}`;
+            hoja.getCell(`A${baseRow}`).value = fechaActual;  // Día
+
+
             hoja.getCell(`B${baseRow}`).value = datos[2];  // DNI
             hoja.getCell(`D${baseRow}`).value = fechanacimiento || "";  // Fecha
             hoja.getCell(`E${baseRow}`).value = datos[0];  // Nombre
