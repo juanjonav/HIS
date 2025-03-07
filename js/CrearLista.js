@@ -35,10 +35,10 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
             hoja.getCell(`E${baseRow}`).value = datos[0];  // Nombre
 
             // Marcar con "X" en la columna correspondiente al sexo
-            if (datos[9].toUpperCase() === "F") {
-                hoja.getCell(`F${baseRow}`).value = "X";  // Femenino en columna F
+            if (datos[11].toUpperCase() === "F") {
+                hoja.getCell(`F${baseRow}`).value = 1;  // Femenino en columna F
             } else if (datos[9].toUpperCase() === "M") {
-                hoja.getCell(`G${baseRow}`).value = "X";  // Masculino en columna G
+                hoja.getCell(`G${baseRow}`).value = 1;  // Masculino en columna G
             }
 
             hoja.getCell(`H${baseRow}`).value = datos[4] || "";  // SIS

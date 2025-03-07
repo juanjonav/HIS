@@ -7,21 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const manejarAgregarPaciente = () => {
       // Obtener valores de los campos del formulario
       const nombresApellidos = document.getElementById("nombresApellidos").value;
-  
       const dia = document.getElementById("dia").value;
       const dni = document.getElementById("dni").value;
       //const historiaClinica = document.getElementById("historiaClinica").value;
       const numeroCita = document.getElementById("numeroCita").value;
       const financiadorSalud = document.getElementById("financiadorSalud").value;
       const etnia = document.getElementById("etnia").value;
-
       const tamizaje = document.getElementById("tamizaje").value;
-      
       const distrito = document.getElementById("Distrito").value;
       const CentroPoblado = document.getElementById("CentroPoblado").value;
       const edad = document.getElementById("edad").value;
       const sexo = document.getElementById("sexo").value;
-  
       // Diagnósticos y códigos CIE
       const diagnostico1 = document.getElementById("diagnostico1").value || "";
       const cie1 = document.getElementById("cie1").value || "";
@@ -60,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${diagnosticos || ""}</td>
         <td>${codigosCIE || ""}</td>
         <td>${fecha || ""}</td>
-        
         <td>
           <button class="btn btn-sm btn-danger btnEliminar">Eliminar</button>
         </td>

@@ -86,14 +86,14 @@ function guardarEnLocalStorage() {
           financiadorSalud: fila.cells[4].textContent,
           etnia: fila.cells[5].textContent,
           tamizaje: fila.cells[6].textContent,
-          distrito: fila.cells[7].textContent,
-          CentroPoblado: fila.cells[8].textContent,
-          edad: fila.cells[9].textContent,
-          sexo: fila.cells[10].textContent,
-          diagnosticos: fila.cells[11].textContent,
-          codigosCIE: fila.cells[12].textContent,
-          fecha: fila.cells[13].textContent,
-          Tamizajetipo: fila.cells[14].textContent
+          Tamizajetipo: fila.cells[7].textContent,
+          distrito: fila.cells[8].textContent,
+          CentroPoblado: fila.cells[9].textContent,
+          edad: fila.cells[10].textContent,
+          sexo: fila.cells[11].textContent,
+          diagnosticos: fila.cells[12].textContent,
+          codigosCIE: fila.cells[13].textContent,
+          fecha: fila.cells[14].textContent,
       };
       datos.push(paciente);
   }
