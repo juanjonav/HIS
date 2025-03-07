@@ -62,11 +62,7 @@
       </div>
      </form>
     <form id="formularioPaciente" class="mb-5">
-
-      
-
       <h3 class="mb-3">Datos del Paciente</h3>
-
       <div class="row g-3">
         <!-- Nombres y apellidos -->
         <div class="col-8">
@@ -209,11 +205,21 @@
           <input type="text" id="cie3" class="form-control" name="cie3" placeholder="">
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-12 text-center">
-            <button type="button" class="btn btn-primary" id="BTNbuscarDiagnosticos">Buscar Diagnósticos</button>
+      <div class="datoscontacto row">
+        <div class="col-4">
+          <label for="Direccion">Direccion</label>
+          <input type="text" id="Direccion" class="form-control" name="Direccion" placeholder="">
         </div>
-    </div>
+        <div class="col-3">
+          <label for="Telefono">Telefono</label>
+          <input type="text" id="Telefono" class="form-control" name="Telefono" placeholder="">
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3 text-end">
+          <button type="button" class="btn btn-primary btn-sm" id="BTNbuscarDiagnosticos">Buscar Diagnósticos</button>
+        </div>
+      </div>
+      
 
       <div class="text-end mt-4">
         <button type="button" id="agregarPaciente" class="btn btn-primary btn-sm">Agregar Paciente</button>
@@ -241,6 +247,8 @@
             <th>Diagnósticos</th>
             <th>CIE</th>
             <th>fecha</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
             <th>Acciones</th>
           </tr>
         </thead>

@@ -62,6 +62,8 @@ function cargarDesdeLocalStorage() {
           <td>${paciente.diagnosticos}</td>
           <td>${paciente.codigosCIE}</td>
           <td>${paciente.fecha}</td>
+          <td>${paciente.Direccion}</td>
+          <td>${paciente.Telefono}</td>
           <td><button class="btn btn-sm btn-danger btnEliminar">Eliminar</button></td>
       `;
 
@@ -94,6 +96,8 @@ function guardarEnLocalStorage() {
           diagnosticos: fila.cells[12].textContent,
           codigosCIE: fila.cells[13].textContent,
           fecha: fila.cells[14].textContent,
+          Direccion: fila.cells[15].textContent,
+          Telefono: fila.cells[16].textContent
       };
       datos.push(paciente);
   }

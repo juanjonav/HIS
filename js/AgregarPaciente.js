@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const codigosCIE = [cie1, cie2, cie3]
         .filter((cie) => cie !== "")
         .join(", ");
-  
+      const Direccion = document.getElementById("Direccion").value;
+      const Telefono = document.getElementById("Telefono").value;
       // Crear una nueva fila en la tabla
       const nuevaFila = document.createElement("tr");
   //<td>${historiaClinica || ""}</td>
@@ -56,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${diagnosticos || ""}</td>
         <td>${codigosCIE || ""}</td>
         <td>${fecha || ""}</td>
+        <td>${Direccion || ""}</td>
+        <td>${Telefono || ""}</td>
         <td>
           <button class="btn btn-sm btn-danger btnEliminar">Eliminar</button>
         </td>

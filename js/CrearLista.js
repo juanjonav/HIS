@@ -40,11 +40,13 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
             } else if (datos[9].toUpperCase() === "M") {
                 hoja.getCell(`G${baseRow}`).value = 1;  // Masculino en columna G
             }
-
-            hoja.getCell(`H${baseRow}`).value = datos[4] || "";  // SIS
+            const tipodeseguro = datos[4] === "2" ? "H" : "I";
+            hoja.getCell(`${tipodeseguro + baseRow}`).value = datos[4] || "";  // SIS
             hoja.getCell(`AA${baseRow}`).value = datos[13] || "";  // Diagnósticos
             hoja.getCell(`AB${baseRow}`).value = datos[3];  // Numero de consulta
 
+            hoja.getCell(`K${baseRow}`).value = datos[15] || "";  // direccion
+            hoja.getCell(`J${baseRow}`).value = datos[16] || "";  // telefono
             // Usar el diccionario para escribir 1 en la columna correcta
             const columna = columnaMap[datos[6]];
             if (columna) {
