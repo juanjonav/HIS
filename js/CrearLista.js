@@ -49,8 +49,11 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
             }
             const tipodeseguro = datos[4] === "2" ? "H" : "I";
             hoja.getCell(`${tipodeseguro + baseRow}`).value = datos[4] || "";  // SIS
-            hoja.getCell(`AA${baseRow}`).value = datos[13] || "";  // Diagnósticos
-            hoja.getCell(`AB${baseRow}`).value = datos[3];  // Numero de consulta
+            const diagnósticos = datos[13] ? datos[13].split(",") : ["", "", ""];
+            hoja.getCell(`AA${baseRow}`).value = diagnósticos[0] || "";  // Primer diagnóstico
+            hoja.getCell(`AB${baseRow}`).value = diagnósticos[1] || "";  // Segundo diagnóstico
+            hoja.getCell(`AC${baseRow}`).value = diagnósticos[2] || "";  // Tercer diagnóstico
+            hoja.getCell(`AD${baseRow}`).value = datos[3];  // Numero de consulta
 
             hoja.getCell(`K${baseRow}`).value = datos[15] || "";  // direccion
             hoja.getCell(`J${baseRow}`).value = datos[16] || "";  // telefono
