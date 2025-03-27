@@ -18,7 +18,7 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
             "01": "L", "02": "M", "03": "N", "04": "O", "05": "P", "06": "Q", "07": "R", "08": "S"
         };
         const lugarnumerocita = {
-            "1": "AE", "2": "AF", "3": "AG", "4": "AH", "5": "AI", "6": "AJ", "7": "AK", "8": "AL"
+            "1": "AG", "2": "AH", "3": "AI", "4": "AJ", "5": "AK", "6": "AL", "7": "AM", "8": "AN"
         }
 
         for (let i = 0; i < Math.min(totalFilas, 25); i++) {
@@ -67,7 +67,7 @@ document.getElementById("btnGenerarExcelTabla").addEventListener("click", async 
                 hoja.getCell(`${letracita}${baseRow}`).value = "x";
             }
 
-            hoja.getCell(`AM${baseRow}`).value = document.getElementById("nombresApellidosResponsable").value || ""  // responsable
+            hoja.getCell(`AO${baseRow}`).value = document.getElementById("nombresApellidosResponsable").value || ""  // responsable
         }
 
         const buffer = await workbook.xlsx.writeBuffer();
