@@ -33,7 +33,7 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
 
       hoja.getCell(`C${baseRow + 2 }`).value = datos[2];  // DNI
      // hoja.getCell(`C${baseRow + 3}`).value = datos[3];  // Historia clínica
-     
+
       hoja.getCell(`D${baseRow + 2}`).value = datos[4];  // Financiamiento
       hoja.getCell(`D${baseRow + 4}`).value = datos[5];  // Etnia
 
@@ -48,6 +48,8 @@ document.getElementById("btnGenerarExcelHis").addEventListener("click", async ()
       hoja.getCell(`Z${baseRow + 3}`).value = codigos[1] || "";
       hoja.getCell(`S${baseRow + 5}`).value = diagnosticos[2] || "";
       hoja.getCell(`Z${baseRow + 5}`).value = codigos[2] || "";
+      //gestante
+      hoja.getCell(`C${baseRow + 5}`).value = datos[17] || "";
   }
   // ========================
 

@@ -70,13 +70,16 @@
           <input type="text" id="nombresApellidos" class="form-control form-control-sm" name="nombresApellidos" placeholder="">
         </div>
 
-        <div class="col-1"></div>
+        <!-- Edad -->
+        <div class="col-md-1">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" id="edad" class="form-control form-control-sm" name="edad" placeholder="">
+        </div>
         <!-- Día -->
         <div class="col-1 ">
           <label for="dia" class="form-label">Día</label>
           <input type="number" id="dia" class="form-control form-control-sm" name="dia" placeholder="">
         </div>
-
         <!-- numero de cita -->
         <div class="col-md-2">
           <label for="numeroCita" class="form-label">Número de Cita</label>
@@ -137,17 +140,10 @@
           </select>
         </div>
         <!-- Centro Poblado -->
-        <div class="col-md-3">
+        <div class="col-md-2">
           <label for="CentroPoblado" class="form-label">Centro Poblado</label>
           <input type="text" id="CentroPoblado" class="form-control form-control-sm" name="CentroPoblado" placeholder="">
         </div>
-
-        <!-- Edad -->
-        <div class="col-md-1">
-          <label for="edad" class="form-label">Edad</label>
-          <input type="number" id="edad" class="form-control form-control-sm" name="edad" placeholder="">
-        </div>
-
         <!-- Sexo -->
         <div class="col-md-2">
           <label for="sexo" class="form-label">Sexo</label>
@@ -157,10 +153,20 @@
             <option value="M">Masculino</option>
           </select>
         </div>
+        <!-- gestante -->
+        <div class="col-md-2">
+          <label for="gestante" class="form-label">Gestante/Puerpera</label>
+          <select id="gestante" class="form-select form-select-sm" name="gestante">
+            <option value="">Seleccione</option>
+            <option value="GESTANTE">GESTANTE</option>
+            <option value="PUERPERA">PUERPERA</option>
+          </select>
+        </div>
         <div class="col-1"></div>
+
         <!--sis  Tamizajetipo-->
         <div class="col-md-2 ">
-          <label for="Tamizajetipo" class="form-label">tamizaje positivo</label>
+          <label for="Tamizajetipo" class="form-label">tamizaje</label>
           <select id="Tamizajetipo" class="form-select form-select-sm" name="Tamizajetipo">
             <option value=""></option>
             <option value="+">Positivo</option>
@@ -250,6 +256,7 @@
             <th>fecha</th>
             <th>Direccion</th>
             <th>Telefono</th>
+            <th>Gestante</th>
             <th>Acciones</th>
           </tr>
         </thead>

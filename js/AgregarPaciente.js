@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //fecha actual
       const dia = document.getElementById("dia").value;
-      
-
       const dni = document.getElementById("dni").value;
       //const historiaClinica = document.getElementById("historiaClinica").value;
       const numeroCita = document.getElementById("numeroCita").value;
@@ -29,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const cie2 = document.getElementById("cie2").value || "";
       const diagnostico3 = document.getElementById("diagnostico3").value || "";
       const cie3 = document.getElementById("cie3").value || "";
-  
-  
       const fecha = document.getElementById("fecha").value; 
       const Tamizajetipo = document.getElementById("Tamizajetipo").value;
       // Separar los diagnósticos y códigos CIE con comas
@@ -42,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .join(", ");
       const Direccion = document.getElementById("Direccion").value;
       const Telefono = document.getElementById("Telefono").value;
+      const gestante = document.getElementById("gestante").value;
       // Crear una nueva fila en la tabla
       const nuevaFila = document.createElement("tr");
   //<td>${historiaClinica || ""}</td>
@@ -63,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${fecha || ""}</td>
         <td>${Direccion || ""}</td>
         <td>${Telefono || ""}</td>
+        <td>${gestante || ""}</td>
         <td>
           <button class="btn btn-sm btn-danger btnEliminar">Eliminar</button>
         </td>
